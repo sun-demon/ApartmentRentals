@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_search"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FF1A1A1A">
+    <RelativeLayout android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:background="@color/dark_gray">
+        <View android:id="@+id/top_horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
+
+
+        <Button style="@style/SelectorTheme"
+            android:id="@+id/district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/top_horizontal_line"
+            android:layout_marginStart="10sp"
+            android:layout_centerVertical="true"
+            android:padding="0sp"
+            android:textSize="18sp"
+            android:textColor="@drawable/button_transparent"
+            android:text="@string/district"
+            android:textAlignment="center"
+            android:drawableStart="@drawable/place"
+            android:background="@android:color/transparent"/>
+        <Button style="@style/TransparentButtonTheme"
+            android:id="@+id/sorting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/top_horizontal_line"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10sp"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="10sp"
+            android:textColor="@drawable/button_transparent"
+            android:textSize="18sp"
+            android:text="@string/sorting"
+            android:drawableStart="@drawable/sort_date"/>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_horizontal_line"
+                android:background="@null"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <Button style="@style/SmallSelectorTheme"
+                        android:id="@+id/price"
+                        android:paddingHorizontal="7sp"
+                        android:text="@string/price"/>
+                    <Button style="@style/SmallSelectorTheme"
+                        android:id="@+id/rooms_number"
+                        android:paddingHorizontal="7sp"
+                        android:text="@string/rooms_number"/>
+                    <Button style="@style/SmallSelectorTheme"
+                        android:id="@+id/total_area"
+                        android:paddingHorizontal="7sp"
+                        android:text="@string/total_area"/>
+                    <Button style="@style/SmallSelectorTheme"
+                        android:id="@+id/floor"
+                        android:paddingHorizontal="7sp"
+                        android:text="@string/floor"/>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray">
+
+
+        <Button style="@style/ActivityButtonTheme"
+            android:id="@+id/main"
+            android:drawableTop="@drawable/search_reverse"
+            android:text="@string/search"
+            android:textColor="@drawable/button_activity_reverse"/>
+        <Button style="@style/ActivityButtonTheme"
+            android:id="@+id/my_ads"
+            android:layout_centerHorizontal="true"
+            android:textColor="@drawable/button_activity"
+            android:text="@string/ads"
+            android:drawableTop="@drawable/ads"/>
+        <Button style="@style/ActivityButtonTheme"
+            android:id="@+id/profile"
+            android:layout_alignParentEnd="true"
+            android:textColor="@drawable/button_activity"
+            android:text="@string/profile"
+            android:drawableTop="@drawable/profile"/>
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:contentDescription="@string/ads_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_panel"
+        android:layout_above="@+id/activity_toolbar"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout android:id="@+id/ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

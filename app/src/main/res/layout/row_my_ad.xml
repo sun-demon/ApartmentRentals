@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="5sp"
+        android:background="@drawable/button">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="120sp"
+            android:layout_marginTop="5sp"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <ImageView android:id="@+id/photo0"
+                    style="@style/NotImageViewTheme"
+                    android:contentDescription="@string/photo0"
+                    android:scaleType="fitXY"/>
+                <ImageView android:id="@+id/photo1"
+                    style="@style/NotImageViewTheme"
+                    android:contentDescription="@string/photo1"
+                    android:scaleType="fitXY"/>
+                <ImageView android:id="@+id/photo2"
+                    style="@style/NotImageViewTheme"
+                    android:contentDescription="@string/photo2"
+                    android:scaleType="fitXY"/>
+                <ImageView android:id="@+id/photo3"
+                    style="@style/NotImageViewTheme"
+                    android:contentDescription="@string/photo3"
+                    android:scaleType="fitXY"/>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp">
+
+            <TextView
+                android:id="@+id/after_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/price"
+                android:text="@string/after_price"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/after_price_per_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_toEndOf="@+id/price_per_square"
+                android:text="@string/after_price_per_square"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/after_rooms_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/rooms_number"
+                android:text="@string/after_rooms"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/after_total_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/total_area"
+                android:text="@string/after_total_area"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/after_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/floor"
+                android:text="@string/after_floor"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/after_floors_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/floors_number"
+                android:text="@string/after_floors_number"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/after_district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5sp"
+                android:layout_toEndOf="@+id/district"
+                android:text="@string/district_small"
+                android:textColor="@color/some_light_gray"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price_per_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_toEndOf="@+id/after_price"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rooms_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32sp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/total_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/after_rooms_number"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/after_total_area"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/floors_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32sp"
+                android:layout_toEndOf="@+id/after_floor"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/some_light_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/after_district"
+                android:layout_marginStart="5sp"
+                android:textColor="@color/some_light_gray"
+                android:textSize="12sp" />
+
+            <ImageView android:id="@+id/child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/edit"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/child"
+                android:layout_marginEnd="50sp"
+                android:layout_marginBottom="10sp"/>
+
+            <ImageButton
+                android:id="@+id/edit"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10sp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/edit"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pencil" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

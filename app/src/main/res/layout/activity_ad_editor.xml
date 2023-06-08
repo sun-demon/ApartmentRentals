@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1A1A1A">
+    <RelativeLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="20sp">
+
+
+        <Button android:id="@+id/back"
+            android:layout_width="50sp"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/arrow_to_left"
+            style="@style/TransparentButtonTheme"/>
+        <ImageButton android:id="@+id/trash"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/trash"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/delete_ad" />
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_panel"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20sp">
+
+
+            <TextView style="@style/HeaderTextViewTheme"
+                android:text="@string/location"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/district"/>
+            <Spinner android:id="@+id/district"
+                android:layout_width="fill_parent"
+                android:layout_height="45sp"
+                android:gravity="center_vertical"
+                android:paddingStart="10sp"
+                android:popupBackground="@color/gray"
+                android:entries="@array/district_names"
+                android:background="@drawable/spinner_background"
+                tools:ignore="RtlSymmetry" />
+
+            <View style="@style/LineViewTheme"
+                android:layout_marginTop="15sp"/>
+
+
+            <TextView style="@style/HeaderTextViewTheme"
+                android:text="@string/about_apartment"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/floor"/>
+            <EditText style="@style/ButtonTheme"
+                android:id="@+id/floor"
+                android:hint="@string/floor_example"
+                android:inputType="number"
+                android:importantForAutofill="no"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/rooms_number"/>
+            <EditText style="@style/ButtonTheme"
+                android:id="@+id/rooms_number"
+                android:hint="@string/rooms_in_apartment"
+                android:inputType="number"
+                android:importantForAutofill="no"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/total_area_with_dimension"/>
+            <EditText style="@style/ButtonTheme"
+                android:id="@+id/total_area"
+                android:hint="@string/total_area_example"
+                android:inputType="numberDecimal"
+                android:importantForAutofill="no" />
+
+            <View style="@style/LineViewTheme"/>
+
+
+            <TextView style="@style/HeaderTextViewTheme"
+                android:text="@string/about_house"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/floors_in_house"/>
+            <EditText style="@style/ButtonTheme"
+                android:id="@+id/floors_number"
+                android:hint="@string/floors_number"
+                android:inputType="number"
+                android:importantForAutofill="no"/>
+
+            <View style="@style/LineViewTheme"/>
+
+
+            <TextView style="@style/HeaderTextViewTheme"
+                android:text="@string/rules"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/possible_with_children"/>
+            <RadioGroup style="@style/RadioGroupTheme">
+                <RadioButton style="@style/RadioButtonYesTheme"
+                    android:id="@+id/possible_with_children"/>
+                <RadioButton style="@style/RadioButtonNoTheme"
+                    android:id="@+id/not_possible_with_children"/>
+            </RadioGroup>
+            <View style="@style/LineViewTheme"/>
+
+
+            <TextView style="@style/HeaderTextViewTheme"
+                android:text="@string/photo"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageButton style="@style/ImageButtonTheme"
+                        android:id="@+id/photo0"
+                        android:contentDescription="@string/photo0" />
+                    <ImageButton style="@style/ImageButtonTheme"
+                        android:id="@+id/photo1"
+                        android:contentDescription="@string/photo1" />
+                    <ImageButton style="@style/ImageButtonTheme"
+                        android:id="@+id/photo2"
+                        android:contentDescription="@string/photo2" />
+                    <ImageButton style="@style/ImageButtonTheme"
+                        android:id="@+id/photo3"
+                        android:contentDescription="@string/photo3" />
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View style="@style/LineViewTheme"/>
+
+            <TextView style="@style/HeaderTextViewTheme"
+                android:text="@string/pricing_policy"/>
+
+            <TextView style="@style/TitleTextViewTheme"
+                android:text="@string/rent_per_month"/>
+            <EditText style="@style/ButtonTheme"
+                android:id="@+id/price"
+                android:inputType="number"
+                android:importantForAutofill="no"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button style="@style/MainButtonTheme"
+        android:id="@+id/continue_to"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginVertical="30sp"
+        android:layout_centerVertical="false"
+        android:text="@string/continue_to"/>
+
+
+</RelativeLayout>

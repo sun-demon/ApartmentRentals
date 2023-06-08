@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_marginHorizontal="20sp">
+
+
+        <Button android:id="@+id/back"
+            android:layout_width="50sp"
+            android:drawableStart="@drawable/arrow_to_left"
+            style="@style/TransparentButtonTheme"/>
+        <Button android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="textEnd"
+            android:text="@string/reset"
+            android:textSize="20sp"
+            android:textColor="@drawable/button_transparent_reverse"
+            style="@style/TransparentButtonTheme"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/total_area"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginBottom="7sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:background="@color/dark_gray"
+        tools:ignore="SmallSp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_margin="10sp">
+        <View android:id="@+id/vertical_line"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"/>
+        <TextView android:id="@+id/prefix_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="5sp"
+            android:text="@string/from"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+        <TextView android:id="@+id/prefix_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_toStartOf="@+id/to"
+            android:layout_marginHorizontal="5sp"
+            android:textAlignment="textEnd"
+            android:text="@string/to"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+        <TextView android:id="@+id/suffix_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_toEndOf="@+id/from"
+            android:layout_marginStart="5sp"
+            android:text="@string/square_meters"
+            android:layout_centerVertical="true"
+            tools:ignore="RelativeOverlap" />
+        <TextView android:id="@+id/suffix_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="5sp"
+            android:text="@string/square_meters"
+            android:layout_centerVertical="true"/>
+
+
+        <EditText android:id="@+id/from"
+            style="@style/ButtonTheme"
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:layout_margin="0sp"
+            android:layout_marginTop="0sp"
+            android:layout_toEndOf="@id/prefix_from"
+            android:backgroundTint="@color/hidden_gray"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+        <EditText android:id="@+id/to"
+            style="@style/ButtonTheme"
+            android:layout_width="120sp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/hidden_gray"
+            android:layout_toStartOf="@id/suffix_to"
+            android:layout_margin="0sp"
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+
+    </RelativeLayout>
+
+    <Button android:id="@+id/apply"
+        style="@style/MainButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50sp"
+        android:textSize="28sp"
+        android:text="@string/apply"/>
+
+
+</LinearLayout>

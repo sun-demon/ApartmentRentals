@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    tools:context=".AboutDeveloperActivity"
+    android:background="#FF1A1A1A">
+    <RelativeLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="20sp">
+
+
+        <Button android:id="@+id/back"
+            android:layout_width="50sp"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/arrow_to_left"
+            android:contentDescription="@string/back"
+            style="@style/TransparentButtonTheme"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_panel">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_above="@+id/sun_demon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60sp"
+            android:text="@string/about_us"/>
+
+        <View android:id="@+id/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView android:id="@+id/sun_demon"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/horizontal_line"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_sun_demon"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="5sp"
+            android:contentDescription="@string/sun_demon"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sun_demon"
+            android:layout_marginTop="50sp"
+            android:textColor="@color/light_gray"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="@string/about_me"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="30sp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/some_light_gray"
+            android:text="@string/author_ship"/>
+
+    </RelativeLayout>
+</RelativeLayout>
